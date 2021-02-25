@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>paragraph one</p>
+<div>div one</div>
+<div>div two</div>
+<div>div three</div>
+<p>paragraph one</p>
+
+<button onclick=foo>Alert</button>
+<button id="btn" onclick="fun();">InnerHtml </button>
+<script>
+
+    //Query Selector
+    var firstDiv = document.querySelector('div');
+    // querySelector always link with their first child .
+    firstDiv.style.color = 'red';
+
+
+    //Query Selector ALL
+    var paragraphs = document.querySelectorAll('p');
+   for(var p of paragraphs)
+     p.style.color = 'blue';
+
+
+     // addEventListener
+     
+      var btn = document.querySelector('button');
+      btn.addEventListener('click',foo);
+      function foo() 
+      { 
+          alert('hello'); 
+          
+       }
+       //innerHtml
+ function fun()
+ {
+      document.getElementById("btn").innerHTML= "Hello";
+
+ }
+
+</script>
+</body>
+</html>
