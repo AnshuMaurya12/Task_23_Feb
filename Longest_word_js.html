@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>Longest Word in String</title>
+</head>
+<body>
+    
+<script>
+    function longestWord()
+{
+    var str= 'Web Development Tutorial';
+    document.write("Input : "+str+ "<br>");
+  var arr = str.match(/\w[a-z]{0,}/gi);
+  var result = arr[0];
+
+  for(var x = 1 ; x < arr.length ; x++)
+  {
+    if(result.length < arr[x].length)
+    {
+    result = arr[x];
+    } 
+  }
+  return result;
+}
+
+document.write("Output : "+longestWord('str'));
+</script>
+
+
+</body>
+</html>

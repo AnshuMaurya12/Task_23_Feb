@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Border_Collapse</title>
+    <style>
+        /* collapse: This value is used to collapse the borders into a single border. Using this, two adjacent 
+       table cells will share a border. When this value is applied, the border-spacing property does not affect. */
+
+        table {
+
+            text-align: center;
+            font-size: 15px;
+            width: 80%;
+            height: 50%;
+        }
+
+        th {
+            border: 2px solid red;
+            background-color: yellow;
+        }
+
+        td {
+            background-color: aquamarine;
+            border: 2px solid red;
+        }
+
+        #t1 {
+            border-collapse: separate;
+            border: 3px solid blue;
+        }
+
+        #t2 {
+            border-collapse: collapse;
+            border: 3px solid blue;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h3> The border-separate Property </h3>
+
+    <table id="t1">
+        <tr>
+            <th> First_Name </th>
+            <th> Last_Name </th>
+            <th> Subject </th>
+            <th> Marks </th>
+        </tr>
+        <tr>
+            <td> James </td>
+            <td> Gosling </td>
+            <td> Maths </td>
+            <td> 92 </td>
+        </tr>
+        <tr>
+            <td> Alan </td>
+            <td> Rickman </td>
+            <td> Maths </td>
+            <td> 89 </td>
+        </tr>
+        <tr>
+            <td> Sam </td>
+            <td> Mendes </td>
+            <td> Maths </td>
+            <td> 82 </td>
+        </tr>
+    </table>
+
+    <h3> The border-collapse Property </h3>
+
+    <table id="t2">
+        <tr>
+            <th> First_Name </th>
+            <th> Last_Name </th>
+            <th> Subject </th>
+            <th> Marks </th>
+        </tr>
+        <tr>
+            <td> James </td>
+            <td> Gosling </td>
+            <td> Maths </td>
+            <td> 92 </td>
+        </tr>
+        <tr>
+            <td> Alan </td>
+            <td> Rickman </td>
+            <td> Maths </td>
+            <td> 89 </td>
+        </tr>
+        <tr>
+            <td> Sam </td>
+            <td> Mendes </td>
+            <td> Maths </td>
+            <td> 82 </td>
+        </tr>
+    </table>
+
+
+</body>
+
+</html>

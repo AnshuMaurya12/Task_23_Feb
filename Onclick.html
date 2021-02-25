@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<title>change image onclick event </title>
+    <style>
+        img{
+            width: 200px;
+            height: 100px;
+        }
+    </style>
+</head>
+<body>
+
+
+<img id="Image" onclick="turnOnOff()" src="../images/bulb off.jpg"> 
+<script>
+         function turnOnOff() 
+         { 
+         
+         var image = document.getElementById('Image'); 
+         if (image.src.match("ONbulb")) 
+             image.src = "../images/bulb off.jpg"; 
+         else
+             image.src = "../images/bulb on.png"; 
+        }
+</script>
+
+
+</body>
+</html>

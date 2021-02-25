@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Copy Input Text</title>
+</head>
+<style>
+    body {
+        background-color: aquamarine;
+    }
+
+    div {
+        background-color: gray;
+        width: 300px;
+        height: 150px;
+        margin: 220px;
+        margin-top: 150px;
+
+    }
+</style>
+</head>
+
+<body>
+    <div>
+        <label> Input : &nbsp; </label>
+        <input type="text" id="text_from"> <br>
+        <button onclick=copy_data(text_from)>Copy</button> <br>
+
+        <label>Copy Text : </label>
+        <input type="text" id="text_to">
+    </div>
+    <script>
+        function copy_data(val) {
+            var a = document.getElementById(val.id).value
+            document.getElementById("text_to").value = a
+        }    
+    </script>
+
+</body>
+
+</html>
