@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>remove_row</title>
+    <style>
+        table {
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 50%;
+        }
+
+        td,th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+
+        tr:nth-child(even) {
+            background-color: #dddddd;
+        }
+    </style>
+</head>
+
+<body>
+
+    <section>
+        <header id="demo">
+
+        </header>
+    </section>
+    <script>
+
+        // Declaration
+
+        var all;
+
+        // Initialization
+        all = [
+            {
+                Id: "1",
+                Name: 'Ramesh',
+                Address: 'Bangalore',
+                Action: ""
+            },
+            {
+                Id: "2",
+                Name: 'Rajesh',
+                Address: 'Hyderbad',
+                Action: ""
+            },
+            {
+                Id: "3",
+                Name: 'Rakesh',
+                Address: 'Chennai',
+                Action: ""
+            }
+        ]
+
+        // presentation
+        //document.write(all)
+        var tableHtml = `<table id="mytable">
+                          <tr>
+                            <th>Id</th>
+                            <th>Name</th>
+                            <th>Address</th>
+                            <th>Action</th>
+                          </tr>`;
+        for (let i = 0; i < 3; i++) {
+            tableHtml += `<tr>
+                            <td>${all[i].Id}</td>
+                            <td>${all[i].Name}</td>
+                            <td>${all[i].Address}</td>
+                            <td><button onclick = deleteItem(${i})>Delete</button></td>
+                          </tr>`
+        }
+        tableHtml += `</table>`;
+        document.write(tableHtml);
+
+        function deleteItem(item) {
+            console.log(item)
+        
+            document.getElementById("mytable").deleteRow(1);
+        }
+
+
+    </script>
+</body>
+
+</html>
