@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get First element of array</title>
+</head>
+
+<body>
+    <script>
+
+// Reverse Word of the String 
+        const str = "We are Programmers";
+        const reverseWords = str => {
+            let reversed = '';
+            reversed = str.split(" ")
+                .map(word => {
+                    return word.split("").reverse().join("");
+                })
+                .join(" ");
+            return reversed;
+        };
+        console.log(reverseWords(str));
+
+        
+ // Get First number of array         
+        var first = function (array, n) {
+            if (array == null)
+                return void 0;
+            if (n == null)
+                return array[0];
+            if (n < 0)
+                return [];
+            return array.slice(0, n);
+        };
+
+        console.log(first([7, 9, 0, -2]));
+        console.log(first([7, 9, 0, -2], 3));
+        console.log(first([7, 9, 0, -2], 6));
+
+// Join all the Element
+
+        var myColor = ["Red", "Green", "White", "Black"];
+        console.log(myColor.join());
+        console.log(myColor.join('+'));
+        console.log(myColor.join('*'));
+  
+// most frequent item or more repeated element of an array
+
+
+        const arr1 = [3, 'a', 'a', 'a', 2, 3, 'a', 3, 'a', 2, 4, 9, 3];
+        let mf = 1;
+        let m = 0;
+        let item;
+        for (let i = 0; i < arr1.length; i++) {
+            for (let j = i; j < arr1.length; j++) {
+                if (arr1[i] == arr1[j])
+                    m++;
+                if (mf < m) {
+                    mf = m;
+                    item = arr1[i];
+                }
+            }
+            m = 0;
+        }
+        console.log(`${item} ( ${mf} times ) `);
+
+// Sum Of Product
+
+
+ var array =  [2,4,9,16,25,36],sum = 0,i;
+    
+for (i = 0; i < array.length; i++) 
+   {
+    sum += array[i];
+    
+    }
+console.log('Sum : '+sum );
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>
